@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 
-const VampireSchema = new Schema({
+const VampireSchema = new Schema ({
     name: {
         type: String,
         required: true,
@@ -18,10 +18,10 @@ const VampireSchema = new Schema({
         type: Date,
     },
     loves: {
-        type: [String],
+       type: [String],
     },
     location: {
-        type: String,
+        type: String
     },
     gender: {
        type: String,
@@ -30,11 +30,7 @@ const VampireSchema = new Schema({
         type: Number,
         min: 0,
     },  
-},
-    {
-        timestamps: true,
-    }
-);
+});
 
 const Vampire = mongoose.model("Vampire", VampireSchema);
 module.exports = Vampire;
