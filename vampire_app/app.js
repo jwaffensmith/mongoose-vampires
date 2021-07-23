@@ -181,7 +181,6 @@ Vampire.find(
     $gt: 1000,
   }
   },
-
   function (error, data) {
   if (error) {
       console.log(error);
@@ -192,6 +191,81 @@ Vampire.find(
 
 /////////////////////////////////////////////////
 // ### Select with OR
+
+/*
+Vampire.find(
+  { 
+    $or: [
+      {
+  location: "New York, New York, US"
+      },
+      {
+  location:  "New Orleans, Louisiana, US"
+    }
+]},
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+
+
+Vampire.find(
+  { 
+    $or: [
+      {
+  loves: "brooding"
+      },
+      {
+  loves: "being tragic"
+    }
+]},
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+
+
+Vampire.find(
+  { 
+    $or: [
+      {
+  victims: {
+    $gt: 1000
+  }
+      },
+      {
+  loves: "marshmallows"
+    }
+]},
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+
+
+Vampire.find(
+  { 
+    $or: [
+      {
+  hair_color: "red"
+      },
+      {
+  eye_color: "green"
+    }
+]},
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+*/
 
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
