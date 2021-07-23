@@ -93,7 +93,45 @@ Vampire.create(
 // ## QUERYING
 /////////////////////////////////////////////////
 // ### Select by comparison
-  
+
+/* Vampire.find({gender: "f"}, function (error, foundFemales) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(foundFemales);
+});
+*/
+/*
+Vampire.find({victims: {$gt: 500}}, function (error, highVictims) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(highVictims);
+});
+
+/*Vampire.find({victims: {$lte: 150}}, function (error, highVictims) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(highVictims);
+});
+
+Vampire.find({victims: {$ne: 210234}}, function (error, highVictims) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(highVictims);
+});
+
+
+Vampire.find({victims: {$gt: 150, $lt: 500}}, function (error, highVictims) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(highVictims);
+});
+*/
+
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
