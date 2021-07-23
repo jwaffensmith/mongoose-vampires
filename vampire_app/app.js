@@ -94,13 +94,15 @@ Vampire.create(
 /////////////////////////////////////////////////
 // ### Select by comparison
 
-/* Vampire.find({gender: "f"}, function (error, foundFemales) {
+
+/*Vampire.find({gender: "f"}, function (error, foundFemales) {
   if (error) {
       console.log(error);
   }
   console.log(foundFemales);
 });
 */
+
 /*
 Vampire.find({victims: {$gt: 500}}, function (error, highVictims) {
   if (error) {
@@ -108,32 +110,85 @@ Vampire.find({victims: {$gt: 500}}, function (error, highVictims) {
   }
   console.log(highVictims);
 });
+*/
 
-/*Vampire.find({victims: {$lte: 150}}, function (error, highVictims) {
+/*
+Vampire.find({victims: {$lte: 150}}, function (error, lessVictims) {
   if (error) {
       console.log(error);
   }
-  console.log(highVictims);
+  console.log(lessVictims);
 });
 
-Vampire.find({victims: {$ne: 210234}}, function (error, highVictims) {
+
+Vampire.find({victims: {$ne: 210234}}, function (error, victims) {
   if (error) {
       console.log(error);
   }
-  console.log(highVictims);
+  console.log(victims);
 });
 
 
-Vampire.find({victims: {$gt: 150, $lt: 500}}, function (error, highVictims) {
+Vampire.find({victims: {$gt: 150, $lt: 500}}, function (error, rangeVictims) {
   if (error) {
       console.log(error);
  }
-  console.log(highVictims);
+  console.log(rangeVictims);
 });
 */
 
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
+// $exists $type
+
+/*
+Vampire.find({title: {$exists: true}}, 
+  function (error, titleExists) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(titleExists);
+});
+
+Vampire.find({victims: {$exists: false}}, 
+  function (error, noVictims) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(noVictims);
+});
+
+Vampire.find(
+  {
+  title: {
+    $exists: true
+  }, 
+  victims: {
+    $exists: false
+  }
+  },
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+
+Vampire.find(
+  { 
+  victims: {
+    $exists: true,
+    $gt: 1000,
+  }
+  },
+
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+*/
 
 /////////////////////////////////////////////////
 // ### Select with OR
