@@ -405,6 +405,38 @@ Vampire.findByIdAndUpdate(
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
+/*
+Vampire.findByIdAndUpdate(
+  "60fb0d837ec10e265dc8b23d", 
+  { $set: 
+    { 
+      gender: 'm', 
+      name: 'moniker' 
+  } 
+  }, 
+  { new : true }, 
+  function (error, data) {
+    if (error) {
+      console.log(error);
+  }
+  console.log(data);
+});
+
+Vampire.updateMany(
+  {gender: "f"}, 
+  { $set: 
+    { 
+      gender: 'fems', 
+  } 
+  }, 
+  { new : true }, 
+  function (error, data) {
+    if (error) {
+      console.log(error);
+  }
+  console.log(data);
+});
+*/
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
