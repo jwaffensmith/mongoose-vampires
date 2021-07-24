@@ -270,6 +270,69 @@ Vampire.find(
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
 
+/*
+Vampire.find(
+  { 
+    $or: [
+      {
+  loves: "frilly shirtsleeves"
+      },
+      {
+  loves: "frilly collars"
+    }
+]},
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+
+
+Vampire.find({loves: "brooding"}, function (error, data) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(data);
+});
+
+Vampire.find(
+  { 
+    $or: [
+    {
+  loves: "appearing innocent"
+    },
+    {
+  loves: "trickery"
+    },
+    {
+      loves: "lurking in rotting mansions"
+    },
+    {
+      loves: "R&B music"
+    },
+]},
+  function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+
+Vampire.find(
+  { 
+    $and: [ 
+      { loves:"fancy cloaks" }, 
+      { loves: { $nin: ["top hats", "virgin blood"] } } 
+    ]},
+function (error, data) {
+  if (error) {
+      console.log(error);
+ }
+  console.log(data);
+});
+*/
+
 /////////////////////////////////////////////////
 //### Negative Selection
 
