@@ -442,6 +442,27 @@ Vampire.updateMany(
 /////////////////////////////////////////////////
 // ## REMOVE
 
+/*
+Vampire.findOneAndDelete(
+  {hair_color: "brown"}, 
+  function (error, response) {
+    if (error) {
+      console.log(error);
+  }
+  console.log(response);
+});
+
+
+Vampire.deleteMany(
+  {eye_color: "blue"}, 
+  function (error, response) {
+    if (error) {
+      console.log(error);
+  }
+  console.log(response);
+});
+*/
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
