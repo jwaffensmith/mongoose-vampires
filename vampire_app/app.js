@@ -132,7 +132,7 @@ Vampire.find({victims: {$ne: 210234}}, function (error, victims) {
 Vampire.find({victims: {$gt: 150, $lt: 500}}, function (error, rangeVictims) {
   if (error) {
       console.log(error);
- }
+}
   console.log(rangeVictims);
 });
 */
@@ -146,7 +146,7 @@ Vampire.find({title: {$exists: true}},
   function (error, titleExists) {
   if (error) {
       console.log(error);
- }
+}
   console.log(titleExists);
 });
 
@@ -154,7 +154,7 @@ Vampire.find({victims: {$exists: false}},
   function (error, noVictims) {
   if (error) {
       console.log(error);
- }
+}
   console.log(noVictims);
 });
 
@@ -184,7 +184,7 @@ Vampire.find(
   function (error, data) {
   if (error) {
       console.log(error);
- }
+}
   console.log(data);
 });
 */
@@ -206,7 +206,7 @@ Vampire.find(
   function (error, data) {
   if (error) {
       console.log(error);
- }
+}
   console.log(data);
 });
 
@@ -224,7 +224,7 @@ Vampire.find(
   function (error, data) {
   if (error) {
       console.log(error);
- }
+}
   console.log(data);
 });
 
@@ -244,7 +244,7 @@ Vampire.find(
   function (error, data) {
   if (error) {
       console.log(error);
- }
+}
   console.log(data);
 });
 
@@ -262,7 +262,7 @@ Vampire.find(
   function (error, data) {
   if (error) {
       console.log(error);
- }
+}
   console.log(data);
 });
 */
@@ -287,7 +287,6 @@ Vampire.find(
  }
   console.log(data);
 });
-
 
 Vampire.find({loves: "brooding"}, function (error, data) {
   if (error) {
@@ -315,7 +314,7 @@ Vampire.find(
   function (error, data) {
   if (error) {
       console.log(error);
- }
+}
   console.log(data);
 });
 
@@ -328,13 +327,63 @@ Vampire.find(
 function (error, data) {
   if (error) {
       console.log(error);
- }
+}
   console.log(data);
 });
 */
 
 /////////////////////////////////////////////////
 //### Negative Selection
+
+/*
+Vampire.find(
+  { 
+    $and: [ 
+      { loves:"ribbons" }, 
+      { eye_color: { $nin: ["brown"] } } 
+    ]},
+function (error, data) {
+  if (error) {
+      console.log(error);
+}
+  console.log(data);
+});
+
+Vampire.find({location: {$ne: "Rome, Italy"}}, 
+function (error, data) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(data);
+});
+
+Vampire.find( 
+  {
+    loves: 
+    {
+      $nin: [
+        "fancy cloaks", 
+        "frilly shirtsleeves", 
+        "appearing innocent", 
+        "being tragic", 
+        "brooding"
+      ]
+    }}, 
+function (error, data) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(data);
+});
+
+Vampire.find({victims: {$lt: 200}}, 
+function (error, data) {
+  if (error) {
+      console.log(error);
+  }
+  console.log(data);
+});
+*/
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
