@@ -389,6 +389,19 @@ function (error, data) {
 /////////////////////////////////////////////////
 // ## REPLACE
 
+/*
+Vampire.findByIdAndUpdate(
+  "60fb0d837ec10e265dc8b23d", 
+  { $set: { name: 'Eve' } }, 
+  { new : true }, 
+  function (error, data) {
+    if (error) {
+      console.log(error);
+  }
+  console.log(data);
+});
+*/
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
